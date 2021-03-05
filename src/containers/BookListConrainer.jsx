@@ -10,7 +10,6 @@ import ErrorIndicatior from '../components/error-indicator';
 
 const BookListConrainer = (props) => {
   const { fetchBooks, books, loading, error, onAddedToCart } = props;
-
   useEffect(() => {
     fetchBooks()
   }, [fetchBooks]);
@@ -28,7 +27,7 @@ const BookListConrainer = (props) => {
   return <BookList books={books} onAddedToCart={onAddedToCart} />
 };
 
-const mapStateToProps = ({books, loading, error}) => {
+const mapStateToProps = ({ bookList: { books, loading, error }}) => {
   return { books, loading, error };
 };
 
