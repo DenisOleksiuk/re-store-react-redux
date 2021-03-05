@@ -20,7 +20,7 @@ export default class BookstoreService {
     return new Promise((resolve) => {
       setTimeout(() => {
         return resolve(this.data);
-      }, 700);
+      }, 200);
     });
   }
 }
